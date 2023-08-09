@@ -4,6 +4,8 @@ import { Navigation } from '../../../config/config'
 const NavbarEcommerce = () => {
 
     const Home = Navigation({ link: '/' })
+    const Chart = Navigation({ link: '/keranjang'})
+    const WishList = Navigation({ link: '/wishlist'})
 
     return(
         <div className='container sticky top-0 z-50 bg-white dark:bg-slate-800 px-2 py-3 h-18 lg:mx-auto'>
@@ -37,14 +39,14 @@ const NavbarEcommerce = () => {
                             <span className="indicator-item indicator-end w-5 badge badge-secondary text-xs font-semibold text-white">
                                 99
                             </span>
-                            <div className='py-1 px-1 w-10 h-10 text-center text-black shadow rounded-xl bg-blue-200'>
+                            <a onClick={Chart} className='py-1 px-1 hover:bg-blue-400 hover:text-white w-10 h-10 text-center text-black shadow rounded-xl bg-blue-200'>
                                 <ShoppingCartOutlined />
-                            </div>
+                            </a>
                         </div>
 
-                        <div className='py-1 px-1 w-10 h-10 text-center text-red-500 shadow rounded-xl bg-blue-200'>
+                        <a onClick={WishList} className='py-1 px-1 hover:bg-blue-400 w-10 h-10 text-center text-red-500 shadow rounded-xl bg-blue-200'>
                             <HeartFilled />
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

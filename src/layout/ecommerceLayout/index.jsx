@@ -1,4 +1,5 @@
-import FooterEcommerce from "./component/footer"
+// import FooterEcommerce from "./component/footer"
+
 import NavbarEcommerce from "./component/navEcommerce"
 
 const EcommerceLayout = ({children}) => {
@@ -10,8 +11,6 @@ const EcommerceLayout = ({children}) => {
             <div className='app'>
                 {children}
             </div>
-
-            <FooterEcommerce />
 
         </>
     )

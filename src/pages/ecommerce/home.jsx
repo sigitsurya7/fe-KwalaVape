@@ -27,9 +27,20 @@ const HomeEcommerce = () => {
   })
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(prevState => ({ ...prevState, banner: false, product: false }));
-    }, 2000);
+    // Cek apakah halaman sudah dimuat sebelumnya
+    const pageLoadedBefore = sessionStorage.getItem('pageLoadedBefore');
+
+    if (!pageLoadedBefore) {
+      setTimeout(() => {
+        setIsLoading(prevState => ({ ...prevState, banner: false, product: false }));
+        sessionStorage.setItem('pageLoadedBefore', 'true');
+      }, 2000);
+    } else {
+      setIsLoading({
+        banner: false,
+        product: false
+      });
+    }
   }, []);
 
   return (
@@ -127,9 +138,15 @@ const HomeEcommerce = () => {
         </div>
 
         {/* Product */}
-        <p className="font-sans my-2 mx-2 dark:text-white font-bold text-xl">
-          Best Seller
-        </p>
+        <div className="flex justify-between">
+          <p className="font-sans my-2 mx-2 dark:text-white font-bold text-xl">
+            Best Seller
+          </p>
+
+          <a href="" className="font-sans my-2 mx-2 text-blue-500 dark:text-white font-bold text-md">
+            Lihat Semua
+          </a>
+        </div>
 
         <div className="container my-4">
           <div className="carousel gap-4 lg:gap-8">
@@ -186,9 +203,15 @@ const HomeEcommerce = () => {
           </div>
         </div>
 
-        <p className="font-sans my-2 mx-2 dark:text-white font-bold text-xl">
-          Promo
-        </p>
+        <div className="flex justify-between">
+          <p className="font-sans my-2 mx-2 dark:text-white font-bold text-xl">
+            Promo
+          </p>
+
+          <a href="" className="font-sans my-2 mx-2 text-blue-500 dark:text-white font-bold text-md">
+            Lihat Semua
+          </a>
+        </div>
 
         <div className="container">
           <div className="">
@@ -255,9 +278,15 @@ const HomeEcommerce = () => {
 
         <div className="my-8">
           <div className="bg-blue-200 px-4 py-4 rounded-lg">
-            <h1 className="text-xl text-center text-black font-bold mb-4">
-              NEW STOCK!
-            </h1>
+            <div className="flex justify-between">
+              <p className="font-sans my-2 mx-2 dark:text-white font-bold text-xl">
+                New Stock
+              </p>
+
+              <a href="" className="font-sans my-2 mx-2 dark:text-white font-bold text-md">
+                Lihat Semua
+              </a>
+            </div>
             <div className="carousel gap-4 lg:gap-8">
               <div className="carousel-item">
                 <SkeletonCard />
