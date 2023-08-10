@@ -126,6 +126,7 @@ const ChartEcommer = () => {
             </p>
           </div>
           <div className="">
+            
             <button className="bg-blue-400 justify-center text-white font-bold rounded-tr-xl rounded-br-xl w-full h-full px-4 py-2 flex items-center">
                 Check Out <ShoppingOutlined className="ml-2" />
             </button>

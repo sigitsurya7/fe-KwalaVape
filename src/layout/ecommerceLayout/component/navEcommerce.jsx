@@ -16,11 +16,11 @@ const NavbarEcommerce = () => {
     }
 
     return(
-        <div className='container sticky top-0 z-50 bg-white dark:bg-slate-800 px-2 py-3 h-18 lg:mx-auto'>
-            <div className='mx-auto'>
+        <div className='container mx-auto sticky top-0 z-50 bg-white dark:bg-slate-800 px-2 py-3 h-18 lg:mx-auto'>
+            <div className=''>
                 <div className='flex justify-between'>
                     <div className='px-0 w-20'>
-                        <a onClick={Home}>
+                        <a onClick={Home} className=' cursor-pointer'>
                             <img
                                 src="https://png.pngtree.com/png-vector/20220708/ourmid/pngtree-fast-food-logo-png-image_5763171.png"
                                 alt=""
@@ -53,7 +53,7 @@ const NavbarEcommerce = () => {
                             </a>
                         </div>
 
-                        <div className={`dropdown dropdown-end `}>
+                        <div className={`dropdown dropdown-end ${hiden}`}>
                             <label tabIndex={0} className=" cursor-pointer avatar">
                                 <div className="w-10 rounded-full">
                                     <img

@@ -5,6 +5,7 @@ import { ShoppingOutlined } from "@ant-design/icons";
 
 import EcommerceLayout from "../../layout/ecommerceLayout";
 import { formatCurrency } from "../../config/config";
+import SkeletonCard from "../../component/card/skeltonCard";
 
 const DetailProduct = () => {
   const { category, nameProduct } = useParams();
@@ -30,6 +31,7 @@ const DetailProduct = () => {
     <>
       <EcommerceLayout>
         <div className="container dark:bg-slate-800 py-3 lg:px-44 px-2 mx-auto">
+          {/* Image */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
             <div className="">
               <Carousel showStatus={false} infiniteLoop>
@@ -72,10 +74,18 @@ const DetailProduct = () => {
                 </div>
               </div>
 
-              {/* Stock */}
-              <div className="flex mb-2">
-                <p className="font-bold text-black">Stock : </p>
-                <p className="ml-2">10</p>
+              <div className="flex justify-between">
+                {/* Stock */}
+                <div className="flex mb-2 text-red">
+                  <p className="font-bold text-black">Terjual : </p>
+                  <p className="ml-2 font-semibold">10</p>
+                </div>
+
+                {/* Stock */}
+                <div className="flex mb-2">
+                  <p className="font-bold text-black">Stock : </p>
+                  <p className="ml-2 font-semibold">10</p>
+                </div>
               </div>
 
               {/* Variant */}
@@ -135,6 +145,8 @@ const DetailProduct = () => {
               </div>
             </div>
           </div>
+
+          {/* About Product */}
           <div>
             <div className="my-4 border-t-2 border-b-2">
                 <div className="px-2 py-2">
@@ -156,8 +168,8 @@ const DetailProduct = () => {
                 </div>
             </div>
 
-            <div className="my-4">
-              <h1 className="text-xl font-bold">Deskripsi Produk</h1>
+            <div className="my-4 border-b-2 pb-4 mx-2">
+              <h1 className="text-xl font-bold mb-2">Deskripsi Produk</h1>
               <article>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                 vel metus congue, molestie eros sed, convallis turpis. Nulla sit
@@ -172,6 +184,18 @@ const DetailProduct = () => {
               </article>
             </div>
           </div>
+
+          {/* Related Product */}
+          <h1 className="font-bold my-4 mx-2 text-xl">Related Product</h1>
+          <div className="container mx-2 carousel gap-2">
+            <div className="carousel-item">
+              <SkeletonCard />
+            </div>
+            <div className="carousel-item">
+              <SkeletonCard />
+            </div>
+          </div>
+
         </div>
       </EcommerceLayout>
       <div className="sticky bottom-1 z-50 w-full h-20 px-2 py-2">

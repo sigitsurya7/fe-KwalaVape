@@ -9,6 +9,7 @@ import ChartEcommer from "../pages/ecommerce/chart"
 import WhisList from "../pages/ecommerce/wishlist"
 import AllProduct from "../pages/ecommerce/product"
 import Profile from "../pages/ecommerce/profile"
+import PrivateUser from "../config/hook/privateUser"
 
 // Error Page
 import NotFound from "../pages/error/404"
@@ -18,20 +19,21 @@ import SignIn from "../pages/auth/signIn"
 import SignUp from "../pages/auth/signUp"
 
 // Hooks Private
-import PrivateUser from "../config/hook/privateUser"
+import ConfirmOder from "../pages/ecommerce/confirmOder"
 
 function IndexRoutes() {
     return(
         <Routes>
             {/* Ecommerce Routes */}
             <Route path="/" element={<HomeEcommerce />} />
-            <Route path="/:category/:nameProduct" element={<DetailProduct />} />
+            <Route path="/product/:category/:nameProduct" element={<DetailProduct />} />
             <Route path="/product/:params" element={<AllProduct />} />
             <Route parh="/kategori/:category" element={<AllProduct />} />
             {/* Will be delete if i have backend */}
             <Route path="/keranjang" element={<ChartEcommer />} />
             <Route path="/wishlist" element={<WhisList />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/confirm" element={<ConfirmOder />} />
 
             {/* Auth Routes */}
             <Route path="/sign-in" element={<SignIn />} />

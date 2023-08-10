@@ -113,7 +113,7 @@ const HomeEcommerce = () => {
           ):(
             <>
               <div className="carousel-item">
-                <div className="flex justify-between w-32 h-full px-4 py-1 dark:text-slate-800 dark:bg-white border-2 border-black rounded-2xl px-auto hover:bg-slate-800 hover:text-white">
+                <div className="flex justify-between cursor-pointer w-32 h-full px-4 py-1 dark:text-slate-800 dark:bg-white border-2 border-black rounded-2xl px-auto hover:bg-slate-800 hover:text-white">
                   <span className="mb-2 mr-2">
                     <AppleOutlined className="w-2 h-2" />
                   </span>
@@ -123,7 +123,7 @@ const HomeEcommerce = () => {
                 </div>
               </div>
               <div className="carousel-item">
-                <div className="flex justify-between w-32 h-full px-4 py-1 dark:text-slate-800 dark:bg-white border-2 border-black rounded-2xl px-auto hover:bg-slate-800 hover:text-white">
+                <div className="flex justify-between cursor-pointer w-32 h-full px-4 py-1 dark:text-slate-800 dark:bg-white border-2 border-black rounded-2xl px-auto hover:bg-slate-800 hover:text-white">
                   <span className="mb-2 mr-2">
                     <CoffeeOutlined className="w-2 h-2" />
                   </span>
