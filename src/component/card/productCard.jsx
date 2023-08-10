@@ -5,15 +5,15 @@ const CardProduct = ({ image, brand, productName, price, afterPrice, category })
     const ToDetail = Navigation({ link: `/${category}/${productName}` })
 
     return (
-        <div className="bg-white border-2 w-48 border-black shadow-md rounded-xl duration-500 hover:scale-10 hover:shadow-xl">
+        <div className="bg-white border-2 w-full border-black shadow-md rounded-xl duration-500 hover:scale-10 hover:shadow-xl">
             <div className="">
                 <div className="flex justify-end">
                     <div className="absolute w-8 h-8 mx-2 my-2 rounded-full text-center shadow-md border-black bg-white hover:bg-red-500 hover:text-white active:bg-red-500">
                         <HeartFilled />
                     </div>
                 </div>
-                <div className="flex justify-end">
-                    <div className="absolute bottom-[8rem] mt-2 mx-2 dark:bg-blue-400 bg-blue-200 shadow-md px-2 py-1 rounded-lg">
+                <div className="flex justify-start">
+                    <div className="absolute mt-3 mx-2 dark:bg-blue-400 bg-blue-200 shadow-md px-2 py-1 rounded-lg">
                         <p className="text-sm font-bold dark:text-white">{category}</p>
                     </div>
                 </div>

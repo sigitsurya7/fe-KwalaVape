@@ -4,11 +4,15 @@ const SignIn = () => {
     return(
         <AuthLayout>
             <div className="">
-                <h1 className="text-3xl font-bold text-blue-400 text-center my-1">Kwala<span className="text-black dark:text-white">Store</span></h1>
+                <h1 className="text-3xl font-bold text-blue-400 text-center my-1">
+                    <a href="/">
+                        Kwala<span className="text-black dark:text-white">Store</span>
+                    </a>
+                </h1>
                 <p className="text-gray-400 text-sm mb-8 text-center font-medium">Login for more promo!</p>
                 <form action="">
                     <input type="text" className="my-4 px-4 py-2 border-2 border-current rounded-lg block w-full" placeholder="Username" />
-                    <input type="text" className="my-4 px-4 py-2 border-2 border-current rounded-lg block w-full" placeholder="Password" />
+                    <input type="password" className="my-4 px-4 py-2 border-2 border-current rounded-lg block w-full" placeholder="Password" />
                     <a href="">
                         <p className="text-right my-4">Lupa password?</p>
                     </a>

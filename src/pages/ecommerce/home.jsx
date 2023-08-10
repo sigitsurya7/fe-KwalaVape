@@ -143,7 +143,7 @@ const HomeEcommerce = () => {
             Best Seller
           </p>
 
-          <a href="" className="font-sans my-2 mx-2 text-blue-500 dark:text-white font-bold text-md">
+          <a href="/product/best-seller" className="font-sans my-2 mx-2 text-blue-500 dark:text-white font-bold text-md">
             Lihat Semua
           </a>
         </div>
@@ -152,21 +152,21 @@ const HomeEcommerce = () => {
           <div className="carousel gap-4 lg:gap-8">
             {isLoading.product ? (
               <>
-                <div className="carousel-item">
+                <div className="carousel-item w-52">
                   <SkeletonCard />
                 </div>
 
-                <div className="carousel-item">
+                <div className="carousel-item w-52">
                   <SkeletonCard />
                 </div>
 
-                <div className="carousel-item">
+                <div className="carousel-item w-52">
                   <SkeletonCard />
                 </div>
               </>
             ) : (
               <>
-                <div className="carousel-item">
+                <div className="carousel-item w-52">
                   <CardProduct
                     image={`https://kurio-img.kurioapps.com/21/06/22/6c8221eb-f08d-4309-9e3c-8c1319a9b411.jpe`}
                     brand={`Blognes`}
@@ -177,7 +177,7 @@ const HomeEcommerce = () => {
                   />
                 </div>
 
-                <div className="carousel-item">
+                <div className="carousel-item w-52">
                   <CardProduct
                     image={`https://storage.googleapis.com/bakingworld-web-production/uploads/media/content_banner/banner-croffle-1668763306611.jpg`}
                     brand={`Croffle Enak`}
@@ -188,7 +188,7 @@ const HomeEcommerce = () => {
                   />
                 </div>
 
-                <div className="carousel-item">
+                <div className="carousel-item w-52">
                   <CardProduct
                     image={`https://www.cubesnjuliennes.com/wp-content/uploads/2022/09/Strawberry-Juice-Recipe.jpg`}
                     brand={`Minuman`}
@@ -208,7 +208,7 @@ const HomeEcommerce = () => {
             Promo
           </p>
 
-          <a href="" className="font-sans my-2 mx-2 text-blue-500 dark:text-white font-bold text-md">
+          <a href="/product/promo" className="font-sans my-2 mx-2 text-blue-500 dark:text-white font-bold text-md">
             Lihat Semua
           </a>
         </div>
@@ -222,21 +222,21 @@ const HomeEcommerce = () => {
               <div className="carousel gap-4 lg:gap-8">
                 {isLoading.product ? (
                   <>
-                    <div className="carousel-item">
+                    <div className="carousel-item w-52">
                       <SkeletonCard />
                     </div>
 
-                    <div className="carousel-item">
+                    <div className="carousel-item w-52">
                       <SkeletonCard />
                     </div>
 
-                    <div className="carousel-item">
+                    <div className="carousel-item w-52">
                       <SkeletonCard />
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className="carousel-item">
+                    <div className="carousel-item w-52">
                       <CardProduct
                         image={`https://kurio-img.kurioapps.com/21/06/22/6c8221eb-f08d-4309-9e3c-8c1319a9b411.jpe`}
                         brand={`Blognes`}
@@ -247,7 +247,7 @@ const HomeEcommerce = () => {
                       />
                     </div>
 
-                    <div className="carousel-item">
+                    <div className="carousel-item w-52">
                       <CardProduct
                         image={`https://storage.googleapis.com/bakingworld-web-production/uploads/media/content_banner/banner-croffle-1668763306611.jpg`}
                         brand={`Croffle Enak`}
@@ -258,7 +258,7 @@ const HomeEcommerce = () => {
                       />
                     </div>
 
-                    <div className="carousel-item">
+                    <div className="carousel-item w-52">
                       <CardProduct
                         image={`https://www.cubesnjuliennes.com/wp-content/uploads/2022/09/Strawberry-Juice-Recipe.jpg`}
                         brand={`Minuman`}
@@ -283,20 +283,20 @@ const HomeEcommerce = () => {
                 New Stock
               </p>
 
-              <a href="" className="font-sans my-2 mx-2 dark:text-white font-bold text-md">
+              <a href="/product/new-stock" className="font-sans my-2 mx-2 dark:text-white font-bold text-md">
                 Lihat Semua
               </a>
             </div>
             <div className="carousel gap-4 lg:gap-8">
-              <div className="carousel-item">
+              <div className="carousel-item w-52">
                 <SkeletonCard />
               </div>
 
-              <div className="carousel-item">
+              <div className="carousel-item w-52">
                 <SkeletonCard />
               </div>
 
-              <div className="carousel-item">
+              <div className="carousel-item w-52">
                 <SkeletonCard />
               </div>
             </div>
