@@ -1,9 +1,23 @@
 import { ShoppingFilled } from "@ant-design/icons"
 import { Navigation } from "../../config/config"
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
+import { isAuthenticatedAdmin, isAuthenticatedUser, isLoggedIn } from "../../middleware/auth/authentication"
 
 const AuthLayout = ({children}) => {
 
     const Home = Navigation({ link: '/'})
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (isLoggedIn()) {
+          if(isAuthenticatedAdmin()){
+            navigate('/ngadimin')
+          }else if(isAuthenticatedUser){
+            navigate('/')
+          }
+        }
+      }, [])
 
     return(
         <>

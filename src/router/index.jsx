@@ -21,6 +21,7 @@ import SignUp from "../pages/auth/signUp"
 // Hooks Private
 import ConfirmOder from "../pages/ecommerce/confirmOder"
 import Dashboard from "../pages/admin/dashboard"
+import PrivateAdmin from "../config/hook/privateAdmin"
 
 function IndexRoutes() {
     return(
@@ -48,8 +49,9 @@ function IndexRoutes() {
                 <Route path="/user/profile" element={<Profile />} />
             </Route>
 
-            <Route path="/ngadimin">
+            <Route path="/ngadimin" element={<PrivateAdmin />}>
                 <Route index element={<Dashboard />} />
+                <Route path="/ngadimin/dashboard" element={<Dashboard />} />
             </Route>
 
             {/* Error Page */}

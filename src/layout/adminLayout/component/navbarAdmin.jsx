@@ -1,9 +1,15 @@
 import React from "react"
+import { LogOutUser } from "../../../middleware/auth/authentication"
 
 const NavbarAdmin = ({ toggleSidebar }) => {
+
+  const HandleLogout = () => {
+    LogOutUser()
+  }
+
   return (
-    <div className="">
-      <div className="navbar bg-base-100">
+    <div className="p-2 bg-gray-100 dark:bg-slate-800">
+      <div className="navbar shadow-md rounded-lg border-2 border-black">
         <div className="flex-1">
           <button
             type="button"
@@ -57,7 +63,7 @@ const NavbarAdmin = ({ toggleSidebar }) => {
                 <a>Settings</a>
               </li>
               <li>
-                <a>Logout</a>
+                <a className="cursor-pointer" onClick={HandleLogout}>Logout</a>
               </li>
             </ul>
           </div>

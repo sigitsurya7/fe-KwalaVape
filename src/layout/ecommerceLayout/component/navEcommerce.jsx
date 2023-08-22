@@ -1,5 +1,6 @@
 import { SearchOutlined, ShoppingCartOutlined, HeartFilled } from '@ant-design/icons'
 import { Navigation } from '../../../config/config'
+import { isAuthenticatedUser } from '../../../middleware/auth/authentication'
 
 const NavbarEcommerce = () => {
 
@@ -9,7 +10,7 @@ const NavbarEcommerce = () => {
     const Profile = Navigation({ link: '/user/profile'})
 
     let hiden = ''
-    if(localStorage.getItem('token')){
+    if(isAuthenticatedUser()){
         hiden = false
     }else{
         hiden = 'hidden'

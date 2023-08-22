@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavbarAdmin from './component/navbarAdmin';
 import SidebarNav from './component/sidenav';
+import FooterAdmin from './component/footer';
 
 const AdminLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -30,13 +31,16 @@ const AdminLayout = ({ children }) => {
   
 
   return (
-    <div className="flex dark:bg-slate-800">
+    <div className="flex bg-gray-100 dark:bg-slate-800">
       <SidebarNav open={sidebarOpen} />
       <div className="lg:pl-64 flex flex-col w-full">
         <div className='sticky top-0 z-30 '>
         <NavbarAdmin toggleSidebar={toggleSidebar} />
         </div>
         <div className="min-h-screen p-4 z-0 dark:bg-slate-800">{children}</div>
+        <div className='sticky bottom-0 z-30'>
+          <FooterAdmin />
+        </div>
       </div>
     </div>
   );

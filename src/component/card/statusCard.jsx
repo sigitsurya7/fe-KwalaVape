@@ -3,10 +3,10 @@ const StatusCard = ({ icon, name, total}) => {
         <>
             <div className="group relative w-full h-full inline-block focus:outline-none cursor-pointer">
                 <div
-                    class="absolute inset-0 translate-x-0 rounded-lg translate-y-0 border-2 border-dashed border-current"
+                    class="absolute inset-0 translate-x-0 rounded-lg translate-y-0 border-2 bg-white dark:bg-slate-800 border-dotted border-current"
                 ></div>
 
-                <div class="relative block border-2 rounded-lg h-full px-4 py-4 border-current bg-white transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1">
+                <div class="relative block border-2 rounded-lg h-full px-4 py-4 border-current bg-white dark:bg-slate-800 dark:text-white transition-transform group-hover:-translate-y-1.5 group-hover:-translate-x-1.5">
                     <div className="flex">
                         <div className="flex flex-col">
                             <div className="text-xl text-center">

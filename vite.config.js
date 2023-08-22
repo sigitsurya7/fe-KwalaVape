@@ -11,6 +11,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/rajaongkir/, ''),
       },
+      '/v1': {
+        target: 'http://203.194.112.59:28001/v1/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/v1/, ''),
+      },
     },
   },
 })

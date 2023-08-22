@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+
+import { CategoryScale, Chart, LinearScale, BarElement, PointElement, LineElement } from "chart.js"
 import Swal from "sweetalert2";
 
 // Format Currency
@@ -40,4 +42,12 @@ export const showErrorAlert = (message) => {
     timer: 2000,
     showConfirmButton: false
   })
+}
+
+export const ConfigChart = () => {
+  Chart.register(CategoryScale)
+  Chart.register(LinearScale)
+  Chart.register(BarElement)
+  Chart.register(PointElement)
+  Chart.register(LineElement)
 }
